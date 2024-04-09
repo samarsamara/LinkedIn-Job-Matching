@@ -42,22 +42,22 @@ cd LinkedIn-Job-Matching
 ## Running the Web Scraping Notebook
 Launch Jupyter Notebook:
 
-Open a terminal in the project directory and run:
+- Open a terminal in the project directory and run:
 
  ```bash
 jupyter notebook
  ```
 This will open Jupyter in your web browser.
 
-Open the Notebook:
+- Open the Notebook:
 
-In the Jupyter interface, navigate to WebScraping_Project.ipynb and click to open it.
+In the Jupyter interface, navigate to **WebScraping_Project.ipynb** and click to open it.
 
-Execute the Notebook:
+- Execute the Notebook:
 
-Run each cell in the notebook by clicking on it and pressing Shift + Enter, or by using the "Run" button in the toolbar. Ensure you execute the cells in the order they appear.
+Run each cell in the notebook by clicking on it and pressing **Shift + Enter**, or by using the "Run" button in the toolbar. Ensure you execute the cells in the order they appear.
 
-Save the Results:
+- Save the Results:
 
 Once you reach the end of the notebook, and have the df_answers DataFrame ready, save it to a CSV file by adding and running a new cell with the following code:
 
