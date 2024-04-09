@@ -66,3 +66,13 @@ df_answers.to_csv('df_answers.csv', index=False)
  ```
 This command saves the DataFrame to a file named df_answers.csv in the project directory.
 
+## Running the Preprocessing Notebook
+- Open the Preprocessing Notebook:
+
+In the Jupyter interface, navigate to **Preproccess_Position_Skills.ipynb** and click to open it.
+
+- Execute the Notebook:
+
+Similar to the previous notebook, run each cell in Preproccess_Position_Skills.ipynb by clicking on it and pressing **Shift + Enter**, or by using the "Run" button in the toolbar. It's important to execute the cells in sequence to ensure the logic flows correctly and dependencies are managed.
+
+
