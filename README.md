@@ -75,4 +75,23 @@ In the Jupyter interface, navigate to **Preproccess_Position_Skills.ipynb** and 
 
 Similar to the previous notebook, run each cell in Preproccess_Position_Skills.ipynb by clicking on it and pressing **Shift + Enter**, or by using the "Run" button in the toolbar. It's important to execute the cells in sequence to ensure the logic flows correctly and dependencies are managed.
 
+- Save the DataFrame to a CSV file: Use the pandas to_csv method to save the temp DataFrame to a CSV file. Add the following line of code at the end of your script or notebook cell:
+
+ ```python
+temp.to_csv('temp.csv', index=False)
+ ```
+This command saves the temp DataFrame to a file named temp.csv in your current working directory. 
+
+### Running the preprocess_users_Skills Notebook
+
+- Open the Notebook: Navigate to the **preprocess_users_Skills.ipynb** notebook in your Jupyter interface and open it.
+
+- Execute the Notebook: Run each cell sequentially by pressing **Shift + Enter**. It's essential to execute the cells in order, as they likely depend on each other for inputs and data processing steps.
+
+- Save the `temp1` DataFrame: At the end of the notebook, you'll generate a DataFrame named `temp1`. This DataFrame contains processed data that will be crucial for subsequent analysis or processing steps. To save `temp1`, add and run the following line of code in the last cell of the notebook:
+
+   ```python
+   temp1.to_csv('temp1.csv', index=False)
+   ```
+
 
