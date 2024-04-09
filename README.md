@@ -82,7 +82,7 @@ temp.to_csv('temp.csv', index=False)
  ```
 This command saves the temp DataFrame to a file named temp.csv in your current working directory. 
 
-### Running the preprocess_users_Skills Notebook
+## Running the preprocess_users_Skills Notebook
 
 - Open the Notebook: Navigate to the **preprocess_users_Skills.ipynb** notebook in your Jupyter interface and open it.
 
@@ -93,7 +93,7 @@ This command saves the temp DataFrame to a file named temp.csv in your current w
    ```python
    temp1.to_csv('temp1.csv', index=False)
    ```
-### Running the Tagging_positions Notebook
+## Running the Tagging_positions Notebook
 
 The next step in our project workflow involves tagging positions. This process is handled in the `Tagging_positions` notebook, which includes important steps for data processing and analysis.
 
@@ -115,7 +115,7 @@ Within this notebook, two key DataFrames need to be saved at different points:
    result.to_csv('result.csv', index=False)
      ```
 
-### Running the knn_users_skills Notebook
+## Running the knn_users_skills Notebook
 
 After tagging positions and preprocessing user skills, the next critical step involves utilizing the K Nearest Neighbors (KNN) algorithm to match user skills with potential job positions. This is accomplished in the `knn_users_skills` notebook.
 
@@ -160,7 +160,7 @@ joblib.dump(knn_model, 'knn_model.joblib')
 ```
 Replace knn_model with the actual variable name of your trained model. This will save your model to a file named knn_model.joblib.
 
-### Running the analyzing_posts Notebook
+## Running the analyzing_posts Notebook
 The `analyzing_posts` notebook focuses on applying KMeans clustering to analyze job posts. This step is crucial for understanding the distribution of job types and the categorization of posts based on the defined features.
 
 - Open the Notebook: Find and open the **analyzing_posts.ipynb** notebook within your Jupyter environment. This part of the project builds upon previous steps, so make sure all preceding notebooks have been completed accordingly.
@@ -189,3 +189,32 @@ import joblib
 joblib.dump(kmeans, 'kmeans.joblib')
 ```
 Ensure you have joblib installed (pip install joblib), and replace kmeans with the actual variable name of your KMeans model. This saves the model to kmeans.joblib.
+## Finalizing the Project with Matching Posts
+
+The last notebook in our project pipeline, `matching_posts`, is where everything comes together. This notebook will match job posts with potential candidates based on the analysis and models we've built and saved in previous steps.
+
+### Running the matching_posts Notebook
+
+- Open the Notebook: Locate **matching_posts.ipynb** in your Jupyter environment and open it. This notebook is crucial as it utilizes the outputs from the previous notebooks to perform the final matching.
+
+- Execute the Notebook: Progressively run each cell up to cell 15, where we derive the final result of our project on the validation set. Execute the cells by selecting each and pressing **Shift + Enter**, or by clicking the "Run" button in the toolbar.
+
+### Saving the Final Result
+
+- **Save the Final Result in Cell 15:**
+  
+  The execution of cell 15 yields the final result of our project on the validation set. Save this outcome by adding the following line in the next cell:
+
+   ```python
+   final_result.to_csv('final_result.csv', index=False)
+    ```
+  Ensure you replace final_result with the actual variable name of the DataFrame containing the results. This will save the final result as final_result.csv in your project directory, without row indices.
+
+### Example of a Predicted Position for a Person
+- **Reviewing Predicted Positions (Cell 22 and Beyond):**
+
+Starting from cell 22, the notebook provides an example showcasing how we predicted positions for a specific person. This section serves as a practical demonstration of how our model applies to individual cases and can offer valuable insights into the model's applicability and performance.
+
+This completes the instructions for running the notebooks and processing the data for our project. We encourage you to explore the final results, consider potential improvements, and possibly extend the project with your ideas.
+
+**Thank you for following through with our project workflow!**
