@@ -114,3 +114,49 @@ Within this notebook, two key DataFrames need to be saved at different points:
      ```python
    result.to_csv('result.csv', index=False)
      ```
+
+### Running the knn_users_skills Notebook
+
+After tagging positions and preprocessing user skills, the next critical step involves utilizing the K Nearest Neighbors (KNN) algorithm to match user skills with potential job positions. This is accomplished in the `knn_users_skills` notebook.
+
+- Open the Notebook: Locate and open the **knn_users_skills.ipynb** notebook in Jupyter. As with previous notebooks, ensure all previous steps have been completed, as this notebook may rely on their outputs.
+
+- Execute the Notebook: Proceed to run each cell sequentially, ensuring that you execute them in the order they appear by pressing **Shift + Enter** or using the "Run" button in the toolbar.
+
+### Saving the DataSets and Model
+
+In this notebook, you will generate a training dataset, a validation dataset, and a trained KNN model. Here’s how to save them:
+
+- **Save the Training Dataset (`knn_results`) in Cell 18:**
+  
+  After executing cell 18, save the training dataset `knn_results` with the following code in the next cell:
+
+   ```python
+   knn_results.to_csv('knn_results.csv', index=False)
+
+This saves the dataset to knn_results.csv in the current directory, without the row indices.
+
+- **Save the Validation Dataset (val_df) in Cell 19:**
+
+Following the completion of cell 19, save the validation dataset val_df using:
+
+```python
+val_df.to_csv('val_df.csv', index=False)
+```
+This command will save the validation dataset to val_df.csv, also without the row indices.
+
+- **Save the Trained KNN Model:**
+
+To save the trained KNN model for later use, you can use the joblib library. If you haven’t already installed joblib, you can do so using pip:
+
+```bash
+pip install joblib
+```
+Then, add and execute the following line of code after the model training cell:
+
+```python
+import joblib
+joblib.dump(knn_model, 'knn_model.joblib')
+```
+Replace knn_model with the actual variable name of your trained model. This will save your model to a file named knn_model.joblib.
+
