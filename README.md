@@ -160,3 +160,32 @@ joblib.dump(knn_model, 'knn_model.joblib')
 ```
 Replace knn_model with the actual variable name of your trained model. This will save your model to a file named knn_model.joblib.
 
+### Running the analyzing_posts Notebook
+The `analyzing_posts` notebook focuses on applying KMeans clustering to analyze job posts. This step is crucial for understanding the distribution of job types and the categorization of posts based on the defined features.
+
+- Open the Notebook: Find and open the **analyzing_posts.ipynb** notebook within your Jupyter environment. This part of the project builds upon previous steps, so make sure all preceding notebooks have been completed accordingly.
+
+- Execute the Notebook:  Work your way through the notebook, running each cell in sequence up to cell 16. You can run a cell by selecting it and pressing **Shift + Enter**, or by clicking the "Run" button.
+
+### Saving Outputs
+
+This notebook produces a DataFrame and a KMeans model that you need to save:
+
+- **Save the DataFrame (`v`) in Cell 15:**
+  
+  Once you reach cell 15 and execute it, save the resulting DataFrame `v` by adding the following line in the next cell:
+
+   ```python
+   v.to_csv('v.csv', index=False)
+   ```
+This command saves the DataFrame to a file named v.csv in the current directory, excluding the row indices.
+
+- **Save the KMeans Model in Cell 16:**
+
+After completing cell 16, you will have trained your KMeans model. To save this model for future use, particularly the cluster centers, use the following code:
+
+```python
+import joblib
+joblib.dump(kmeans, 'kmeans.joblib')
+```
+Ensure you have joblib installed (pip install joblib), and replace kmeans with the actual variable name of your KMeans model. This saves the model to kmeans.joblib.
