@@ -93,5 +93,24 @@ This command saves the temp DataFrame to a file named temp.csv in your current w
    ```python
    temp1.to_csv('temp1.csv', index=False)
    ```
+### Running the Tagging_positions Notebook
 
+The next step in our project workflow involves tagging positions. This process is handled in the `Tagging_positions` notebook, which includes important steps for data processing and analysis.
 
+- Open the Notebook: Within the Jupyter interface, locate and open the **Tagging_positions.ipynb** notebook. Ensure you've completed previous steps as this notebook may depend on earlier outputs.
+
+- Execute the Notebook: Carefully run each cell in the notebook in the order they appear. You can execute a cell by clicking on it and pressing **Shift + Enter**, or by using the "Run" button in the toolbar.
+
+### Saving DataFrames
+
+Within this notebook, two key DataFrames need to be saved at different points:
+
+- **DataFrame `x` in Cell 12:** After executing up to cell 12, you will have the DataFrame `x` ready. Save this DataFrame by adding and running the following line of code in the next cell:
+
+   ```python
+   x.to_csv('x.csv', index=False)
+   ```
+- **DataFrame `result` in Cell 26:** After executing up to cell 26, you will have the DataFrame `result` ready. Save this DataFrame by adding and running the following line of code in the next cell:
+     ```python
+   result.to_csv('result.csv', index=False)
+     ```
